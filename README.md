@@ -1,4 +1,5 @@
 # WebMethodApi
+
 ASP.Net WebMethod using jQuery AJAX
 
 
@@ -10,3 +11,4 @@ An important thing to note is that the method is declared as static (C#) and is 
 
 ## HTML Markup
 
+![capture 1](https://github.com/anicetkeric/WebMethodApi/blob/master/Capture.PNG)
