@@ -22,7 +22,37 @@ An important thing to note is that the method is declared as static (C#) and is 
 
 
 ## Jquery Script
+```javascript
+function GetAllBooks() {
+    // JQuery AJAX Code Here 
 
+    var DropDownList1 = $("#DropDownList1");
+ 
+
+    $.ajax({
+        type: "POST",
+        url: "index.aspx/GetAllBooks",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (response) {
+
+            var books = response.d;
+            $.each(books, function (index, b) {
+                DropDownList1.append('<option value="' + b.Id + '">' + b.Title + '</option>');
+            });
+        },
+        failure: function (msg) {
+            alert(msg);
+        },
+        error: function (r) {
+            alert(r);
+
+        }
+    });
+
+
+}
+```
 
 ## HTML Markup
 ```HTML
